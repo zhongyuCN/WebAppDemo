@@ -1,0 +1,43 @@
+﻿@model WebAppDemo.Models.ContentViewModel
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    <a asp-action="Create">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <td> <input type="checkbox" class="done-checkbox"></td>
+            <td>序号</td>
+            <td>标题</td>
+            <td>内容</td>
+            <td>添加时间</td>
+            <td>操作</td>
+            
+
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model.Contents) {
+        <tr>
+            <td>
+                <input type="checkbox" class="done-checkbox">
+            </td>
+            <td>@item.Id</td>
+            <td>@item.title</td>
+            <td>@item.content</td>
+            <td>@item.add_time</td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
