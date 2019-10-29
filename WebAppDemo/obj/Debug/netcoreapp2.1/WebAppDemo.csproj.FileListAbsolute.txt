@@ -32,3 +32,4 @@ D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\WebAppDemo.pdb
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\WebAppDemo.csproj.CopyComplete
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Index.g.cshtml.cs
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Add.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Edit.g.cshtml.cs

@@ -27,10 +27,10 @@ namespace WebAppDemo.Models
         /// <summary>
         /// 创建时间
         /// </summary>
-        public DateTime add_time { get; set; }
+        public DateTime? add_time { get; set; }
         /// <summary>
         /// 修改时间
         /// </summary>
-        public DateTime modify_time { get; set; }
+        public DateTime? modify_time { get; set; }
     }
 }

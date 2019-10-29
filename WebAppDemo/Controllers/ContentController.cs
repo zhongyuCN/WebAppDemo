@@ -32,22 +32,28 @@ namespace WebAppDemo.Controllers
             string title= Convert.ToString(Request.Form["title"]);
             string content = Convert.ToString(Request.Form["content"]);
             string status = Convert.ToString(Request.Form["status"]);
-            string addDate = Convert.ToString(Request.Form["add_time"]);
+            string addDate = string.IsNullOrEmpty(Convert.ToString(Request.Form["add_time"])) ? DateTime.Now.ToString("yyyy/MM/dd hh:mm:ss"): Convert.ToString(Request.Form["add_time"]);
 
             AppendTxt($"{id} {title} {content} {status} {addDate}", @"D:\DataBase.txt");
 
-            return View("Index");
+            return Redirect("index");
+        }
+
+        [HttpGet]
+        public IActionResult Edit()
+        {
+            return View();
         }
 
         private List<Content> ReadTxt(string path)
         {
             List<Content> list = new List<Content>();
-             
+            //throw new Exception("Test异常");
 
             using (TextReader reader=new StreamReader(path))
             {
                 string line = string.Empty;
-                Content content = new Content();
+                Content content; 
                 
                 while (!string.IsNullOrEmpty( line = reader.ReadLine()))
                 {
@@ -56,7 +62,7 @@ namespace WebAppDemo.Controllers
                     {
                         continue;
                     }
-                   
+                    content = new Content();
                     content.Id =Convert.ToInt32( array[0]);
                     content.title = array[1];
                     content.content = array[2];
