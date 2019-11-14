@@ -15,6 +15,27 @@ namespace WebAppDemo.Controllers
             return View();
         }
 
+        public IActionResult Index2()
+        {
+            MenuViewModel viewModel = new MenuViewModel();
+
+
+            Menu menu = new Menu();
+            menu.menuName = "一级菜单";
+            menu.subMenus = new List<Menu>() { new Menu() { menuName = "menu" + 1, url = "index" } };
+            viewModel.menus.Add(menu);
+
+            menu = new Menu();
+            menu.menuName = "一级菜单2";
+            menu.subMenus = new List<Menu>() { new Menu() { menuName = "menu" + 2, url = "index" } };
+            viewModel.menus.Add(menu);
+
+
+
+            return View(viewModel);
+        }
+
+
         public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";

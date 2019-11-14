@@ -40,10 +40,27 @@ namespace WebAppDemo.Controllers
         }
 
         [HttpGet]
-        public IActionResult Edit()
+        public IActionResult Edit(int  id)
         {
+           
             return View();
         }
+
+        [HttpPost]
+        public IActionResult Edit()
+        {
+
+
+            return Redirect("index");
+        }
+
+        [HttpGet]
+        public IActionResult Details(int id)
+        {
+            List < Content > list= ReadTxt(@"D:\DataBase.txt");
+            return View(list[0]);
+        }
+
 
         private List<Content> ReadTxt(string path)
         {
@@ -79,6 +96,15 @@ namespace WebAppDemo.Controllers
         {
             using (TextWriter writer = new StreamWriter(path,true))
             {
+                writer.WriteLine(text);
+            }
+        }
+
+        private void UpdateTxt(int id, string text, string path)
+        {
+            using (TextWriter writer = new StreamWriter(path, true))
+            {
+               
                 writer.WriteLine(text);
             }
         }

@@ -33,3 +33,11 @@ D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\WebAppDemo.csproj.CopyC
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Index.g.cshtml.cs
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Add.g.cshtml.cs
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Edit.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Content\Details.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Pages\_ValidationScriptsPartial.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Create.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Delete.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Details.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Edit.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Index.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index2.g.cshtml.cs

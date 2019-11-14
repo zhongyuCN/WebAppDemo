@@ -5,6 +5,7 @@ using System.Threading.Tasks;
 
 namespace WebAppDemo.Models
 {
+    [Serializable]
     public class Content
     {
         /// <summary>
