@@ -21,8 +21,9 @@ namespace WebAppDemo.Controllers
 
 
             Menu menu = new Menu();
-            menu.menuName = "一级菜单";
-            menu.subMenus = new List<Menu>() { new Menu() { menuName = "menu" + 1, url = "index" } };
+            menu.menuName = "一级菜单1";
+            menu.url = "/Home/index";
+            //menu.subMenus = new List<Menu>() { new Menu() { menuName = "menu" + 1, url = "index" } };
             viewModel.menus.Add(menu);
 
             menu = new Menu();

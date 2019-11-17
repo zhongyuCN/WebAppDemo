@@ -41,3 +41,4 @@ D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Deta
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Edit.g.cshtml.cs
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Movies\Index.g.cshtml.cs
 D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Home\Index2.g.cshtml.cs
+D:\Project\WebAppDemo\WebAppDemo\obj\Debug\netcoreapp2.1\Razor\Views\Login\Index.g.cshtml.cs

@@ -1,0 +1,12 @@
+{
+  "ExpandedNodes": [
+    "",
+    "\\WebAppDemo",
+    "\\WebAppDemo\\wwwroot",
+    "\\WebAppDemo\\wwwroot\\lib",
+    "\\WebAppDemo\\wwwroot\\lib\\jquery",
+    "\\WebAppDemo\\wwwroot\\lib\\jquery\\dist"
+  ],
+  "SelectedNode": "\\WebAppDemo\\wwwroot\\lib\\jquery\\dist\\jquery.js",
+  "PreviewInSolutionExplorer": false
+}

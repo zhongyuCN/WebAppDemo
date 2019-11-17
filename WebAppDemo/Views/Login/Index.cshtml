@@ -1,0 +1,80 @@
+﻿
+@{
+    Layout = null;
+}
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+    <meta name="description" content="">
+    <meta name="author" content="">
+    <link rel="icon" href="../../favicon.ico">
+
+    <title>Signin Template for Bootstrap</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="~/lib/bootstrap/dist/css/bootstrap.min.css" rel="stylesheet" />
+
+    <link href="~/lib/bootstrap/dist/css/signin.css" rel="stylesheet" />
+</head>
+
+<body>
+
+    <div class="container">
+
+        <form id="userLogin" class="form-signin" >
+            <h2 class="form-signin-heading">用户名或者电子邮箱</h2>
+            <label for="inputEmail" class="sr-only">Email address</label>
+            <input type="text" id="inputEmail" name="userName" class="form-control" placeholder="请输入用户名" required autofocus>
+            <label for="inputPassword" class="sr-only">Password</label>
+            <input type="password" id="inputPassword"name="userPassword" class="form-control" placeholder="请输入密码" required>
+            <div class="checkbox">
+                <label>
+                    <input type="checkbox" value="remember-me"> 记住我
+                </label>
+            </div>
+            <button id="btLogin" class="btn btn-lg btn-primary btn-block" type="button" >登录</button>
+        </form>
+
+    </div> <!-- /container -->
+
+</body>
+</html>
+<script src="~/lib/jquery/dist/jquery.min.js"></script>
+<script src="~/lib/bootstrap/dist/js/bootstrap.min.js"></script>
+<script>
+    $().ready(function () {
+        $('#btLogin').click(function () {
+            $.ajax({
+                //async :false,
+                data: $('#userLogin').serialize(),
+                type: "post",
+                url: "login",                
+                error: function (xhr) {
+
+                    $('#inputEmail').popover({
+                        container: 'body', 
+                        placement: 'right',                        
+                        trigger: 'hover',
+                        content: xhr.responseText
+                    });
+                    $('#inputEmail').popover('show');
+                },
+                success: function (result) {                                       
+                    window.location.href = result.url;
+                }
+
+            });
+         
+
+        });
+    });
+
+
+</script>
+

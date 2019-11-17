@@ -2,8 +2,6 @@
 @{
     Layout = null;
 }
-
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -59,31 +57,40 @@
                                     <li><a href="#">One more separated link</a></li>
                                 </ul>
                             </li>
+
+
+
+
                             @if (Model != null)
                             {
                                 foreach (var item in Model.menus)
                                 {
+
                                     if (item.subMenus != null)
                                     {
                                         <li class="dropdown">
                                             <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-haspopup="true" aria-expanded="false">@item.menuName <span class="caret"></span></a>
-                                            <ul class="dropdown-menu">
-                                                @foreach (var v in item.subMenus)
-                                                {
 
-                                                    <li>@Html.ActionLink(v.menuName, v.url)</li>
-                                                }
-                                            </ul>
+                                            @if (item.subMenus != null)
+                                            {
+                                                <ul class="dropdown-menu">
+                                                    @foreach (var v in item.subMenus)
+                                                    {
+
+                                                        <li>@Html.ActionLink(v.menuName, v.url)</li>
+                                                    }
+                                                </ul>
+                                            }
                                         </li>
-
-
-
-
                                     }
+                                    else
+                                    {
+                                        <li><a href=@item.url>@item.menuName</a></li>
+                                    }
+
+
+
                                 }
-
-
-
                             }
                         </ul>
                     </div>
@@ -223,7 +230,6 @@
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
-    <script>window.jQuery || document.write('<script src="../../assets/js/vendor/jquery.min.js"><\/script>')</script>
 
     <script src="~/lib/bootstrap/dist/js/bootstrap.js"></script>
 
